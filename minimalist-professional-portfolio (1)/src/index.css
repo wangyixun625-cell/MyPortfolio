@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-bg: #F5F5F7;
+  --color-surface: #FFFFFF;
+  --color-border: rgba(0, 0, 0, 0.08);
+  --color-accent: #000000;
+  --color-text-primary: #1D1D1F;
+  --color-text-secondary: #86868B;
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-text-primary font-sans antialiased overflow-x-hidden;
+  }
+}
+
+.glass {
+  @apply bg-white/80 backdrop-blur-md border border-border;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom cursor or other roasted-specific styles can go here */
